@@ -11,6 +11,13 @@ public class Main {
 //Добавить в класс Rectangle метод isTheSameRectangle с единственным параметром типа Rectangle возвращающий тип boolean . Данный метод должен сравнить 2 прямоугольника (вызывающий и тот, который передан аргументом в метод) на предмет равенства (прямоугольники равны, если равны их стороны)
 //Для демонстрации работы программы в методе main создать 3 экземпляра класса Rectangle (1 из них должен быть квадратом, 2 остальных прямоугольниками). Для каждого из созданных объектов продемонстрировать работу всех методов класса Rectangle
 //Залить код в репозиторий и отправить ссылку на репозиторий преподавателю
+//    Доделать в ДЗ №4 (в том же репозитории):
+//    В классе Rectangle создать статическую переменную createdRectangles типа int с модификатором доступа private. Добавить в каждый из конструкторов увеличение этой переменной на 1
+//    В класс Rectangle добавить статический метод printRectanglesCount. Этот метод должен выводить значение переменной createdRectangles в формате “Всего было создано [n] прямоугольников” ([n] заменить на реальное число)
+//    Создать в классе Rectangle 2 приватные константы (использовать модификаторы private final static) типа String с именами RUSSIAN_CLASS_NAME и ENGLISH_CLASS_NAME. Проинициализировать их значениями “Прямоугольник” и “Rectangle” соответственно
+//    Создать в классе Rectangle статический метод printClassName с единственным аргументом типа boolean и названием printInRussian. Метод должен в зависимости от значения аргумента выводить название класса на русском или английском языке (для вывода использовать константы созданные в предыдущем пункте)
+//    Не забудьте залить изменения в репозиторий (сделать commit и push)
+
     public static void main(String[] args) {
         Rectangle rectangle1 = new Rectangle(2.0, 2.0);
         Rectangle rectangle2 = new Rectangle(2.0, 3.0);
@@ -33,6 +40,7 @@ public class Main {
         rectangle2.printRectangleKind();
         System.out.print("rectangle3: ");
         rectangle3.printRectangleKind();
+        Rectangle.printRectanglesCount();
         System.out.println(rectangle1.isTheSameRectangle(rectangle2));
         System.out.println(rectangle2.isTheSameRectangle(rectangle3));
         System.out.println(rectangle1.isTheSameRectangle(rectangle3));
